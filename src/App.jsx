@@ -8,7 +8,7 @@ export default function App() {
   return (  
     <>
       <Navbar/>
-      <Router basename="/your-repo-name">
+      <Router basename="/yeah-web">
         <Routes>
          <Route path="/" element={<Home />} />
          <Route path="/about" element={<About />} />
