@@ -1,0 +1,400 @@
+.main{
+  margin: 0;
+  height: 100vh;
+}
+.navbar img{
+  height: 80px;
+  width: 80px;
+
+}
+.log{
+  display: flex;
+}
+.navbar{
+  display: flex;
+  justify-content: space-between;
+  width: auto;
+  height: 80px;
+
+}
+.log h2{
+  background-color: #a0ec5948;
+  border-radius: 50%;
+  padding: 5px auto;
+  color: rgb(226, 217, 177);
+}
+
+.nav-links ul{
+  display: flex;
+  gap: 5px;
+}
+
+.hero{
+  justify-items: center;
+  display: flex;
+  justify-content: space-between;
+  padding: 15px;
+}
+
+.chocolate{
+
+  will-change: filter;
+  transition: filter 300ms;
+}
+.chocolate:hover {
+  filter: drop-shadow(0 0 2em #04c714aa);
+}
+
+.hero h1{
+  margin-top: 150px;
+  font-style: italic;
+  font-size: 40px;
+  color: rgb(226, 217, 177) ;
+}
+.slide-text {
+  font-size: 2.5rem;
+  font-weight: 700;
+  opacity: 0;
+  transform: translateY(100px);
+  animation: slideIn 1.5s ease-out forwards;
+}
+
+/* When it slides in */
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.product-btn button{
+  color: rgb(226, 217, 177);
+  margin-left: 100px;
+  font-size: large;
+  display: inline-block;
+  padding: 10px 20px;
+  border: 2px solid rgb(226, 217, 177);
+  background-color: rgba(255, 255, 255, 0.1);;
+  border-radius: 30px;
+  transition: all 0.3s ease; /* smooth hover effect */
+  font-weight: 600;
+}
+.product-btn button:hover{
+  border-color: #00ff99; /* change this to your preferred color */
+  background-color: rgba(255, 255, 255, 0.1); /* optional */
+  color: #00ff99; /* optional text color change */
+}
+
+.leaf {
+  position: absolute;
+  top: -20vh;
+  width: 80px;
+  height: 80px;
+  background: url('basil-leaf.png') no-repeat center/contain;
+  opacity: 0.9;
+  pointer-events: none;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+/* Unique animation paths for each leaf */
+.leaf:nth-child(1) {
+  left: 5%;
+  animation-name: flow1;
+  animation-duration: 18s;
+  animation-delay: 0s;
+}
+.leaf:nth-child(2) {
+  left: 25%;
+  animation-name: flow2;
+  animation-duration: 22s;
+  animation-delay: 2s;
+  transform: scale(0.9);
+}
+.leaf:nth-child(3) {
+  left: 50%;
+  animation-name: flow3;
+  animation-duration: 20s;
+  animation-delay: 4s;
+  transform: scale(1.1);
+}
+.leaf:nth-child(4) {
+  left: 70%;
+  animation-name: flow4;
+  animation-duration: 24s;
+  animation-delay: 1s;
+  transform: scale(0.8);
+}
+.leaf:nth-child(5) {
+  left: 82%;
+  animation-name: flow5;
+  animation-duration: 26s;
+  animation-delay: 3s;
+  transform: scale(1.2);
+}
+
+/* Each keyframe has a slightly different horizontal drift + rotation path */
+@keyframes flow1 {
+  0%   { transform: translate(0, -10vh) rotate(0deg); opacity: 0; }
+  10%  { opacity: 1; }
+  25%  { transform: translate(30px, 25vh) rotate(45deg); }
+  50%  { transform: translate(-50px, 55vh) rotate(100deg); }
+  75%  { transform: translate(40px, 80vh) rotate(160deg); }
+  100% { transform: translate(-10px, 110vh) rotate(240deg); opacity: 0; }
+}
+
+@keyframes flow2 {
+  0%   { transform: translate(0, -15vh) rotate(0deg); opacity: 0; }
+  15%  { opacity: 1; }
+  40%  { transform: translate(-60px, 45vh) rotate(-120deg); }
+  70%  { transform: translate(80px, 75vh) rotate(-200deg); }
+  100% { transform: translate(-40px, 110vh) rotate(-280deg); opacity: 0; }
+}
+
+@keyframes flow3 {
+  0%   { transform: translate(0, -20vh) rotate(0deg); opacity: 0; }
+  20%  { opacity: 1; }
+  35%  { transform: translate(60px, 35vh) rotate(90deg); }
+  55%  { transform: translate(-40px, 55vh) rotate(180deg); }
+  85%  { transform: translate(20px, 90vh) rotate(270deg); }
+  100% { transform: translate(-10px, 110vh) rotate(360deg); opacity: 0; }
+}
+
+@keyframes flow4 {
+  0%   { transform: translate(0, -10vh) rotate(0deg); opacity: 0; }
+  10%  { opacity: 1; }
+  30%  { transform: translate(-30px, 30vh) rotate(-60deg); }
+  60%  { transform: translate(50px, 70vh) rotate(-160deg); }
+  90%  { transform: translate(-20px, 100vh) rotate(-240deg); }
+  100% { transform: translate(0, 110vh) rotate(-300deg); opacity: 0; }
+}
+
+@keyframes flow5 {
+  0%   { transform: translate(0, -12vh) rotate(0deg); opacity: 0; }
+  15%  { opacity: 1; }
+  35%  { transform: translate(50px, 40vh) rotate(70deg); }
+  60%  { transform: translate(-50px, 70vh) rotate(140deg); }
+  85%  { transform: translate(40px, 95vh) rotate(210deg); }
+  100% { transform: translate(-20px, 110vh) rotate(300deg); opacity: 0; }
+}
+.hero h3{
+  margin-top: 200px;
+  font-size: 25px;
+  color: rgb(226, 217, 177);
+}
+/*
+.products {
+  position: relative;
+  width: 400px;   
+  height: 400px;
+  overflow: hidden;
+  border-radius: 20px;
+}
+
+.products img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  animation: fadeSlide 12s infinite ease-in-out;
+  border-radius: 20px;
+  transition: transform 1s ease;
+}
+
+
+.products img:nth-child(1) { animation-delay: 0s; }
+.products img:nth-child(2) { animation-delay: 4s; }
+.products img:nth-child(3) { animation-delay: 8s; }
+
+
+.products img:hover {
+  transform: scale(1.05);
+}
+
+
+@keyframes fadeSlide {
+  0% { opacity: 0; transform: scale(1); }
+  10% { opacity: 1; transform: scale(1.03); }
+  30% { opacity: 1; transform: scale(1.05); }
+  40% { opacity: 0; transform: scale(1.05); }
+  100% { opacity: 0; }
+} */
+ .products {
+  position: relative;
+  width: 400px;
+  height: 400px;
+  overflow: hidden;
+  border-radius: 20px;
+}
+
+.products img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  left: 100%;
+  animation: slideShow 12s infinite;
+}
+
+.products img:nth-child(1) { animation-delay: 0s; }
+.products img:nth-child(2) { animation-delay: 4s; }
+.products img:nth-child(3) { animation-delay: 8s; }
+
+@keyframes slideShow {
+  0% { left: 100%; opacity: 0; }
+  5% { left: 0%; opacity: 1; }
+  30% { left: 0%; opacity: 1; }
+  35% { left: -100%; opacity: 0; }
+  100% { left: -100%; opacity: 0; }
+}
+
+/* About Section */
+.hidden {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 1s ease;
+}
+
+.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+.about {
+  position: relative;
+  color: rgb(226, 217, 177);
+  padding: 100px 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.about-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 60px;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  width: 100%;
+}
+
+.about-image img {
+  width: 100%;
+  max-width: 450px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  animation: floatImage 5s ease-in-out infinite;
+}
+
+@keyframes floatImage {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+.about-text {
+  flex: 1;
+  min-width: 300px;
+  animation: slideUp 1.2s ease-out forwards;
+  opacity: 0;
+  transform: translateY(40px);
+}
+
+@keyframes slideUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.about-text h2 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.about-text p {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  margin-bottom: 15px;
+  color: rgb(226, 221, 195);
+}
+
+.about-btn {
+  color: rgb(226, 217, 177);
+  font-size: large;
+  display: inline-block;
+  padding: 10px 20px;
+  border: 2px solid rgb(226, 217, 177);
+  background-color: rgba(255, 255, 255, 0.1);;
+  border-radius: 30px;
+  transition: all 0.3s ease; /* smooth hover effect */
+  font-weight: 600;
+}
+
+.about-btn:hover {
+  border-color: #00ff99;
+  color: #00ff99;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* Decorative leaves */
+.about-leaf {
+  width: 120px;
+  position: absolute;
+  opacity: 0.7;
+  right: 10%;
+  bottom: 5%;
+  animation: floatLeaf 6s ease-in-out infinite alternate, driftLeaf  infinite linear;
+}
+
+@keyframes floatLeaf {
+  0% {
+    transform: rotate(0deg) translateY(0);
+  }
+  100% {
+    transform: rotate(5deg) translateY(-10px);
+  }
+}
+
+
+.leaf-left {
+  top: 10%;
+  left: 10px;
+  transform: rotate(-30deg);
+}
+
+.leaf-right {
+  bottom: 10%;
+  right: 10px;
+  transform: rotate(45deg);
+}
+
+@keyframes driftLeaf {
+  0% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(15px) rotate(10deg); }
+  100% { transform: translateY(0) rotate(0deg); }
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .about-content {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+  .about-image img {
+    max-width: 300px;
+  }
+  .about-text h2 {
+    font-size: 1.8rem;
+  }
+}
+
+
+

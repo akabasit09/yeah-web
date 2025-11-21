@@ -1,0 +1,49 @@
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background-color: transparent;
+  background-image: radial-gradient(at center center, #40d47e 0%, #1b643a 75%);
+}
+
+.link {
+  display: inline-block;
+  padding: 10px 20px;
+  color: rgb(226, 217, 177);
+  border: 2px solid rgb(226, 217, 177);
+  border-radius: 30px;
+  text-decoration: none;
+  transition: all 0.3s ease; /* smooth hover effect */
+  font-weight: 600;
+}
+
+.link:hover {
+  border-color: #00ff99; /* change this to your preferred color */
+  background-color: rgba(255, 255, 255, 0.1); /* optional */
+  color: #00ff99; /* optional text color change */
+}
+
+.leaf-divider {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 100px;
+  overflow: hidden;
+  opacity: 0.5;
+}
