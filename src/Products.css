@@ -76,7 +76,19 @@
   object-fit: contain;
   transition: transform 0.4s ease;
 }
+@media (max-width: 768px) {
+  .products-items {
+    padding: 50px 5%; /* Adjust padding on smaller screens */
+  }
 
+  .product-card {
+    width: 180px; /* Scale down card width */
+  }
+
+  .product-grid {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* More flexible grid on mobile */
+  }
+}
 .product-card h4 {
   margin-top: 15px;
   font-size: 1.1rem;

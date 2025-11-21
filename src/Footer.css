@@ -54,6 +54,20 @@
   transition: color 0.3s ease;
 }
 
+@media (max-width: 768px) {
+  .footer {
+    padding: 60px 5% 30px;
+  }
+
+  .footer-links {
+    gap: 15px; /* Adjust spacing */
+  }
+
+  .footer-logo img {
+    width: 50px;
+    height: 50px;
+  }
+}
 .footer-links a:hover {
   color: #00ff99;
 }
@@ -110,11 +124,4 @@
 }
 
 /* responsive */
-@media (max-width: 768px) {
-  .footer {
-    padding: 60px 5% 30px;
-  }
-  .footer-links {
-    gap: 15px;
-  }
-}
+
