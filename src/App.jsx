@@ -1,4 +1,4 @@
-import { Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./Home";
 import About from "./about";
 import Products from "./Products";
@@ -8,12 +8,14 @@ export default function App() {
   return (  
     <>
       <Navbar/>
-      <Home />
+      <Router basename="/your-repo-name">
         <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/products" element={<Products />} />
+         <Route path="/" element={<Home />} />
+         <Route path="/about" element={<About />} />
+         <Route path="/products" element={<Products />} />
         </Routes>
+      </Router>
+
         
     </>
   );
